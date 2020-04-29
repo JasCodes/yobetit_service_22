@@ -23,7 +23,7 @@ const initSearchEngine = () => {
 
 const prefetch = async () => {
   try {
-    const data = await fetch("https://restcountries.eu/rest/v2/name/india");
+    const data = await fetch("https://restcountries.eu/rest/v2/all");
     const json = await data.json();
     const searchEngine = initSearchEngine();
     searchEngine.addDocuments(json);
